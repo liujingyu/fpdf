@@ -30,7 +30,8 @@ $mapNames = array(
 $pdf = new PDF_Chinese('P', 'mm', 'A4');
 $pdf->AddPage();
 $pdf->AddGBFont('sinfang', '仿宋_GB2312');
-$pdf->SetFont('sinfang', '', 8);
+$pdf->AddGBFont('msyh', '微软雅黑');
+$pdf->SetFont('msyh', '', 8);
 
 #顾客信息
 $pdf->Cell(0, 8, iconv("UTF-8", "gbk//TRANSLIT", $mapNames['ctime'].":".$order['ctime']));
